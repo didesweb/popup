@@ -26,12 +26,12 @@
 .ui-state-highlight .ui-icon,
 .ui-state-error .ui-icon,
 .ui-state-error-text .ui-icon {
-	background-image: url("images/close.png") !important;
+	background-image: url("http://didesweb.com/images/close.png") !important;
 	width: 16px;
 	height: 16px;
 }
 .ui-icon:hover {
-	background-image: url("images/closehover.png") !important;
+	background-image: url("http://didesweb.com/images/closehover.png") !important;
 }
 .ui-icon-close { background-position: 0; }
 .ui-icon-closethick { background-position: 0; }
