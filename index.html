@@ -1,0 +1,75 @@
+<!-- Didesweb -->
+<!-- http://didesweb.com/-->
+<!-- Diseño y desarrollo web -->
+<!DOCTYPE HTML>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Didesweb, ejemplo de popup con jQuery UI</title>
+	<link href="jquery-ui.css" rel="stylesheet">
+	<link href="popupstyle.css" rel="stylesheet">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+</head>
+<body>
+	<button type="button" id="boton" style="padding:3px;">Abrir PopUp</button>
+	<div id="popup" title="Didesweb">
+		<p>Ejemplo de poup creado con jQueryUI</p>
+	</div>
+	<script>
+	$(function() {
+		$( "#popup" ).hide();
+			$('#boton').click( function(){
+				$( "#popup" ).show();
+				$( "#popup" ).dialog();
+			}
+		);
+	});
+	</script>
+	<button href="#" id="boton_confirm" style="padding:3px;">Abrir PopUp</button>
+	<div id="popup_confirm" title="Confirmar">
+		<p>Ejemplo de poup creado con jQueryUI con botones de confirmación</p>
+	</div>
+	<script>
+	$( "#popup_confirm" ).dialog({
+		autoOpen: false,
+		width: 400,
+		buttons: [ {
+			text: "Ok",
+			click: function() {
+			$( this ).dialog( "close" );
+		}},{
+			text: "Cancel",
+			click: function() {
+				$( this ).dialog( "close" );
+			}
+		}]
+	});
+	$(function() {
+			$('#boton_confirm').click( function(){
+				$( "#popup_confirm" ).dialog("open");
+			}
+		);
+	});
+	</script>
+	<button type="button" id="boton_effect" style="padding:3px;">Abrir PopUp</button>
+	<div id="popup_effect" title="Popup" style="text-align:center;">
+		<p>
+			Ejemplo Popup con efectos creado con jQueryUI
+		</p>
+	</div>
+	<script>
+		$(function() {
+			$( "#popup_effect" ).hide();
+				$('#boton_effect').click( function(){
+					$( "#popup_effect" ).show();
+					$( "#popup_effect" ).dialog({
+						show: "blind",
+						hide: "explode"
+					});
+				}
+			);
+		});
+	</script>
+</body>
+</html>
